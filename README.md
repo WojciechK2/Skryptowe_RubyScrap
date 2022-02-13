@@ -13,22 +13,22 @@ wykorzystują bibliotekę Nokogiri.
 
 3.0 Należy pobrać podstawowe dane o produktach (tytuł, cena), dowolna
 kategoria
-  -- wskazanie ścierzki do /s kategorii na stronie Amazona
-  -- wykonywane jest zapytanie na tą stronę, gdzie z kart pobierane są nazwa i ceny (regular i sales) produktu
-  -- ilość przejrzanych kart typu categories moze zostać ustawiona w zmiennej $pages_limit (to znaczy: że przejdzie do "next" u dou strony 2 razy -> w sumie 3 strony)
-  -- wszystkie informacje zapisywane są w tablicy $products
-  -- wyświetlanie wyników w trakcie pobierania informacji opcjonalne -> zmienna $display_results = false
-  -- zapisywanie do pliku domyślnie ustawione na true -> zmienne $save_to_file = true, $filename = "results.txt"
+- wskazanie ścierzki do /s kategorii na stronie Amazona
+- wykonywane jest zapytanie na tą stronę, gdzie z kart pobierane są nazwa i ceny (regular i sales) produktu
+- ilość przejrzanych kart typu categories moze zostać ustawiona w zmiennej $pages_limit (to znaczy: że przejdzie do "next" u dou strony 2 razy -> w sumie 3 strony)
+- wszystkie informacje zapisywane są w tablicy $products
+- wyświetlanie wyników w trakcie pobierania informacji opcjonalne -> zmienna $display_results = false
+- zapisywanie do pliku domyślnie ustawione na true -> zmienne $save_to_file = true, $filename = "results.txt"
 3.5 Należy pobrać podstawowe dane o produktach wg słów kluczowych
-  -- jeśli tablica keywors nie jest pusta, przeszukiwanie odbywa się poprzez wyszukiwanie (ale już nie po kategoriach) $keywords = []#["smart watch"]#["grill","vegetables"]
-  -- podobnie jak w poprzednim przypadku pobierane są informacje ze zwróconej strony
+- jeśli tablica keywors nie jest pusta, przeszukiwanie odbywa się poprzez wyszukiwanie (ale już nie po kategoriach) $keywords = []#["smart watch"]#["grill","vegetables"]
+- podobnie jak w poprzednim przypadku pobierane są informacje ze zwróconej strony
 4.0 Należy rozszerzyć dane o produktach o dane szczegółowe widoczne
 tylko na podstronie o produkcie
-  -- po zebraniu wszystkich produktow i ich linków można wywołać serię zapytań na strony produktów.
-  -- dodatkowym atrybutem jest pobieranie sekcji "about this item" ze strony produktu (jeśli się da, jeśli taka istnieje)
-  -- ilość produktów do deep search jest zdefiniowana w zmiennej $deep_search_limit = 20 (tzn. pierwszych 20 znalezionych produktów zostanie sprawdzone dokładniej)
+- po zebraniu wszystkich produktow i ich linków można wywołać serię zapytań na strony produktów.
+- dodatkowym atrybutem jest pobieranie sekcji "about this item" ze strony produktu (jeśli się da, jeśli taka istnieje)
+- ilość produktów do deep search jest zdefiniowana w zmiennej $deep_search_limit = 20 (tzn. pierwszych 20 znalezionych produktów zostanie sprawdzone dokładniej)
 4.5 Należy zapisać linki do produktów
-  -- full link jest zapisywany w pliku
+- full link jest zapisywany w pliku
 5.0 Dane należy zapisać w bazie danych np. SQLite via Sequel
 
 ## Sposób użycia
