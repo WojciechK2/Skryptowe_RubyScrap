@@ -37,58 +37,46 @@ tylko na podstronie o produkcie
 
 Sterowanie wykonaniem scrapera realizowane jest przez zmienne glogalne zdefiniowane na początku dokumentu
 
-#it is set, won't work in other places
+#it is set, won't work in other places   
+$base_url = "https://www.amazon.com"   
 
-  $base_url = "https://www.amazon.com"
+#Spoof User Agent to circumvent bot restrictions   
+$user_agent =    
 
-#Spoof User Agent to circumvent bot restrictions
+#Scraping works with amazon /s pages -> the "deeper" categories page    
+$starting_page =     
+#"/s?i=industrial&srs=21216824011&bbn=21216824011&dc&qid=1644707744&ref=lp_21216824011_nr_i_3" #Smart Home Smart Locks & Entry     
+"/s?i=specialty-aps&bbn=16225009011&rh=n%3A%2116225009011%2Cn%3A281407&ref=nav_em__nav_desktop_sa_intl_accessories_and_supplies_0_2_5_2" #COMPUTER ACESSOORIES & SUPPLY CATEGORY     
 
-  $user_agent = 
+#setting those would trigger different scraping behavior     
+#leave those empty if you want to browse by the starting page      
+#if keywords are specified, it would launch an requests to amazon search functionality for each keyword -> and collect products based on the returned pages    
+$keywords = []#["smart watch"]#["grill","vegetables"]     
 
-#Scraping works with amazon /s pages -> the "deeper" categories page
+#how many search pages to check     
+$keywords_pages_limit = 2     
 
-  $starting_page = 
-  #"/s?i=industrial&srs=21216824011&bbn=21216824011&dc&qid=1644707744&ref=lp_21216824011_nr_i_3" #Smart Home Smart Locks & Entry
-  "/s?i=specialty-aps&bbn=16225009011&rh=n%3A%2116225009011%2Cn%3A281407&ref=nav_em__nav_desktop_sa_intl_accessories_and_supplies_0_2_5_2" #COMPUTER ACESSOORIES & SUPPLY CATEGORY
+#how many categories pages can be browsed (those that are on the bottom of the page > navigation 1,2,3,4,5...etc)    
+$pages_limit = 3    
 
-#setting those would trigger different scraping behavior
-#leave those empty if you want to browse by the starting page
-#if keywords are specified, it would launch an requests to amazon search functionality for each keyword -> and collect products based on the returned pages
+#timeout, to reduce the rate    
+$timeout = 3 #seconds    
 
-  $keywords = []#["smart watch"]#["grill","vegetables"]
+#deep search / entering the product specific pages     
+$deep_search = true    
 
-#how many search pages to check
+#deep search limit / how many products to check/ if set to 0 does it to all elements     
+$deep_search_limit = 20    
 
-  $keywords_pages_limit = 2
+#display_results / display in console while scraping    
+$display_results = false    
 
-#how many categories pages can be browsed (those that are on the bottom of the page > navigation 1,2,3,4,5...etc)
+#save to file    
+$save_to_file = true    
 
-  $pages_limit = 3
+#filename   
+$filename = "results.txt"`   
 
-#timeout, to reduce the rate
+to run:   
 
-  $timeout = 3 #seconds
-
-#deep search / entering the product specific pages
-
-  $deep_search = true
-
-#deep search limit / how many products to check/ if set to 0 does it to all elements
-
-  $deep_search_limit = 20
-
-#display_results / display in console while scraping
-
-  $display_results = false
-
-#save to file
-
-  $save_to_file = true
-
-#filename
-
-  $filename = "results.txt"`
-
-to run:
-
-`ruby scraper.rb`
+`ruby scraper.rb`   
