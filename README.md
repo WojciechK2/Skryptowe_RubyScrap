@@ -33,8 +33,6 @@ tylko na podstronie o produkcie
 4.5 Należy zapisać linki do produktów
 - full link jest zapisywany w pliku
 
-5.0 Dane należy zapisać w bazie danych np. SQLite via Sequel
-
 ## Sposób użycia
 
 Sterowanie wykonaniem scrapera realizowane jest przez zmienne glogalne zdefiniowane na początku dokumentu
