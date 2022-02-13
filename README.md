@@ -26,7 +26,7 @@ kategoria
 
 4.0 Należy rozszerzyć dane o produktach o dane szczegółowe widoczne
 tylko na podstronie o produkcie
-- po zebraniu wszystkich produktow i ich linków można wywołać serię zapytań na strony produktów.
+- po zebraniu wszystkich produktow i ich linków można wywołać serię zapytań na strony produktów. $deep_search = true
 - dodatkowym atrybutem jest pobieranie sekcji "about this item" ze strony produktu (jeśli się da, jeśli taka istnieje)
 - ilość produktów do deep search jest zdefiniowana w zmiennej $deep_search_limit = 20 (tzn. pierwszych 20 znalezionych produktów zostanie sprawdzone dokładniej)
 
