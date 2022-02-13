@@ -37,41 +37,57 @@ tylko na podstronie o produkcie
 
 Sterowanie wykonaniem scrapera realizowane jest przez zmienne glogalne zdefiniowane na początku dokumentu
 
-`#it is set, won't work in other places
-$base_url = "https://www.amazon.com"
+#it is set, won't work in other places
+
+  $base_url = "https://www.amazon.com"
 
 #Spoof User Agent to circumvent bot restrictions
-$user_agent = 
+
+  $user_agent = 
 
 #Scraping works with amazon /s pages -> the "deeper" categories page
-$starting_page = 
-#"/s?i=industrial&srs=21216824011&bbn=21216824011&dc&qid=1644707744&ref=lp_21216824011_nr_i_3" #Smart Home Smart Locks & Entry
-"/s?i=specialty-aps&bbn=16225009011&rh=n%3A%2116225009011%2Cn%3A281407&ref=nav_em__nav_desktop_sa_intl_accessories_and_supplies_0_2_5_2" #COMPUTER ACESSOORIES & SUPPLY CATEGORY
+
+  $starting_page = 
+  #"/s?i=industrial&srs=21216824011&bbn=21216824011&dc&qid=1644707744&ref=lp_21216824011_nr_i_3" #Smart Home Smart Locks & Entry
+  "/s?i=specialty-aps&bbn=16225009011&rh=n%3A%2116225009011%2Cn%3A281407&ref=nav_em__nav_desktop_sa_intl_accessories_and_supplies_0_2_5_2" #COMPUTER ACESSOORIES & SUPPLY CATEGORY
 
 #setting those would trigger different scraping behavior
 #leave those empty if you want to browse by the starting page
 #if keywords are specified, it would launch an requests to amazon search functionality for each keyword -> and collect products based on the returned pages
-$keywords = []#["smart watch"]#["grill","vegetables"]
+
+  $keywords = []#["smart watch"]#["grill","vegetables"]
+
 #how many search pages to check
-$keywords_pages_limit = 2
+
+  $keywords_pages_limit = 2
+
 #how many categories pages can be browsed (those that are on the bottom of the page > navigation 1,2,3,4,5...etc)
-$pages_limit = 3
+
+  $pages_limit = 3
 
 #timeout, to reduce the rate
-$timeout = 3 #seconds
+
+  $timeout = 3 #seconds
 
 #deep search / entering the product specific pages
-$deep_search = true
+
+  $deep_search = true
+
 #deep search limit / how many products to check/ if set to 0 does it to all elements
-$deep_search_limit = 20
+
+  $deep_search_limit = 20
 
 #display_results / display in console while scraping
-$display_results = false
+
+  $display_results = false
 
 #save to file
-$save_to_file = true
+
+  $save_to_file = true
+
 #filename
-$filename = "results.txt"`
+
+  $filename = "results.txt"`
 
 to run:
 
