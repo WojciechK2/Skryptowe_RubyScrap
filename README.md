@@ -37,7 +37,7 @@ tylko na podstronie o produkcie
 
 Sterowanie wykonaniem scrapera realizowane jest przez zmienne glogalne zdefiniowane na początku dokumentu
 
-#it is set, won't work in other places
+`#it is set, won't work in other places
 $base_url = "https://www.amazon.com"
 
 #Spoof User Agent to circumvent bot restrictions
@@ -71,7 +71,7 @@ $display_results = false
 #save to file
 $save_to_file = true
 #filename
-$filename = "results.txt"
+$filename = "results.txt"`
 
 to run:
 
