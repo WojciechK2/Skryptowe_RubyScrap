@@ -1,6 +1,6 @@
 # Skryptowe_RubyScrap
 
-Scraper w Ruby z wykożystaniem Nokogiri (https://nokogiri.org/)
+Scraper w Ruby z wykorzystaniem Nokogiri (https://nokogiri.org/)
 
 ## Jak działa
 
